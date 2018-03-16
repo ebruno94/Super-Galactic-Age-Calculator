@@ -41,6 +41,6 @@ export class Calculator{
     dateDifference(year1, month1, day1, year2, month2, day2){
         var date1 = new Date(`${year1}-${month1}-${day1}`);
         var date2 = new Date(`${year2}-${month2}-${day2}`);
-        return date1.getSeconds() - date2.getSeconds();
+        return (Date.parse(date1) - Date.parse(date2)) / 1000;
     }
 }

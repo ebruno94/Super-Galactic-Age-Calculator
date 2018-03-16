@@ -17,4 +17,8 @@ describe('Calculator', function() {
       let newCalculator = new Calculator(12);
       expect(newCalculator.ageVenus()).toEqual(19);
   })
+  it('should return correct conversion of Earth age to Mars', function(){
+      let newCalculator = new Calculator(12);
+      expect(newCalculator.ageMars()).toEqual(6);
+  });
 });

@@ -5,7 +5,7 @@ export class Calculator{
     // }
 
     ageSeconds(age){
-        return age * 365 * 24 * 60 * 60;
+        return Math.round((age * 365 * 24 * 60 * 60) * 100) / 100;
     }
 
     ageMercury(age){
@@ -42,7 +42,7 @@ export class Calculator{
     dateDifference(year1, month1, day1, year2, month2, day2){
         var date1 = new Date(`${year1}-${month1}-${day1}`);
         var date2 = new Date(`${year2}-${month2}-${day2}`);
-        return (Date.parse(date1) - Date.parse(date2)) / 1000;
+        return Math.abs((Date.parse(date2) - Date.parse(date1)) / 1000);
     }
 
     checkExpectancy(num){

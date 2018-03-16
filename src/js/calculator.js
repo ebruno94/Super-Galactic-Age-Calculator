@@ -8,10 +8,18 @@ export class Calculator{
     }
 
     ageMercury(){
-        return this.age / 0.24;
+        return Math.round((this.age / 0.24) * 100) / 100 ;
     }
 
     ageVenus(){
-        return Math.round(this.age / 0.62);
+        return Math.round((this.age / 0.62) * 100) / 100;
+    }
+
+    ageMars(){
+        return Math.round((this.age / 1.88) * 100) / 100;
+    }
+
+    ageJupiter(){
+        return Math.round((this.age / 11.86) * 100) / 100;
     }
 }

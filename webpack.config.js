@@ -17,7 +17,7 @@ module.exports = {
     new UglifyJsPlugin( {sourceMap: true} ),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Super Galactic Space Calculator | Ernest Bruno',
+      title: 'Super-Galactic-Space-Calculator',
       template: './src/html/index.html',
       inject: 'body'
     })

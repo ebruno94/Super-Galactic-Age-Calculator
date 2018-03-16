@@ -1,3 +1,4 @@
+import $ from 'jquery';
 export class Calculator{
     // constructor(age){
     //     this.age = age;

@@ -23,8 +23,21 @@ describe('Calculator', function() {
   });
   it('should return correct number of years left given age and planet', function(){
       expect(newCalculator.expectancy("earth", 69.66, 12)).toEqual(57.66);
+  });
+
+  it('MERCURY should return correct number of years left given age and planet', function(){
       expect(newCalculator.expectancy("MERCURY", 69.66, 12)).toEqual(240.25);
+  });
+
+  it('MARS should return correct number of years left given age and planet', function(){
       expect(newCalculator.expectancy("MaRs", 69.66, 12)).toEqual(30.67);
+  });
+
+  it('JUPITER should return correct number of years left given age and planet', function(){
       expect(newCalculator.expectancy("jupiter", 69.66, 12)).toEqual(4.86);
+  });
+
+  it('should return the correct difference between dates in seconds', function(){
+     expect(newCalculator.dateDifference(2018, "March", 16, 2018, "March", 15)).toEqual(0);
   });
 });

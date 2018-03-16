@@ -28,18 +28,19 @@ export class Calculator{
         if (planet.toLowerCase() === "earth"){
             return averageLE - age;
         } else if (planet.toLowerCase() === "mercury"){
-            return ageMercury(averageLE) - ageMercury(age);
+            return Math.round((this.ageMercury(averageLE) - this.ageMercury(age)) * 100) / 100;
         } else if (planet.toLowerCase() === "venus"){
-            return ageVenus(averageLE) - ageVenus(age);
+            return Math.round((this.ageVenus(averageLE) - this.ageVenus(age)) * 100) / 100;
         } else if (planet.toLowerCase() === "mars"){
-            return ageMars(averageLE) - ageMars(age);
+            return Math.round((this.ageMars(averageLE) - this.ageMars(age)) * 100) / 100;
         } else if (planet.toLowerCase() === "jupiter"){
-            return ageJupiter(averageLE) - ageJupiter(age);
+            return Math.round((this.ageJupiter(averageLE) - this.ageJupiter(age)) * 100) /100;
         }
     }
 
     dateDifference(year1, month1, day1, year2, month2, day2){
         var date1 = new Date(`${year1}-${month1}-${day1}`);
         var date2 = new Date(`${year2}-${month2}-${day2}`);
+        return date1.getSeconds() - date2.getSeconds();
     }
 }

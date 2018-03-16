@@ -13,4 +13,8 @@ describe('Calculator', function() {
      let newCalculator = new Calculator(12);
      expect(newCalculator.ageMercury()).toEqual(50);
   });
+  it('should return correct conversion of Earth age to Venus age', function(){
+      let newCalculator = new Calculator(12);
+      expect(newCalculator.ageVenus()).toEqual(19);
+  })
 });

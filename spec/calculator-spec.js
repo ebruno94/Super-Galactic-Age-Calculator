@@ -5,28 +5,26 @@ describe('Calculator', function() {
   //   let newCalculator = new Calculator(15);
   //   expect(newCalculator.age).toEqual(15);
   // });
+  const newCalculator = new Calculator();
   it('should test that given age in years will be turned to seconds', function(){
-    let newCalculator = new Calculator();
-    expect(newCalculator.ageSeconds(1)).toEqual(31536000);
+     expect(newCalculator.ageSeconds(1)).toEqual(31536000);
   });
   it('should return correct conversion of Earth age to Mercury Age', function(){
-     let newCalculator = new Calculator();
      expect(newCalculator.ageMercury(12)).toEqual(50.00);
   });
   it('should return correct conversion of Earth age to Venus age', function(){
-      let newCalculator = new Calculator();
       expect(newCalculator.ageVenus(12)).toEqual(19.35);
   })
   it('should return correct conversion of Earth age to Mars', function(){
-      let newCalculator = new Calculator();
       expect(newCalculator.ageMars(12)).toEqual(6.38);
   });
   it('should return correct conversion of Earth age to Jupiter age', function(){
-      let newCalculator = new Calculator();
       expect(newCalculator.ageJupiter(12)).toEqual(1.01);
   });
-  it('should return number of years a user has left to live on given planet', function(){
-      let newCalculator = new Calculator();
-      expect(newCalculator.ageJupiter(12)).toEqual(1.01);
+  it('should return correct number of years left given age and planet', function(){
+      expect(newCalculator.expectancy("earth", 69.66, 12)).toEqual(57.66);
+      expect(newCalculator.expectancy("MERCURY", 69.66, 12)).toEqual(240.25);
+      expect(newCalculator.expectancy("MaRs", 69.66, 12)).toEqual(30.67);
+      expect(newCalculator.expectancy("jupiter", 69.66, 12)).toEqual(4.86);
   });
 });

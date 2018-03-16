@@ -43,4 +43,12 @@ export class Calculator{
         var date2 = new Date(`${year2}-${month2}-${day2}`);
         return (Date.parse(date1) - Date.parse(date2)) / 1000;
     }
+
+    checkExpectancy(num){
+        if (num > 0){
+            return num;
+        } else {
+            return "hooray!";
+        }
+    }
 }

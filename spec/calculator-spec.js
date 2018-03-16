@@ -40,4 +40,9 @@ describe('Calculator', function() {
   it('should return the correct difference between dates in seconds', function(){
      expect(newCalculator.dateDifference(2018, "March", 16, 2018, "March", 15)).toEqual(86400);
   });
+
+  it('should return number of days left to live. If current age exceeds avg life expectancy for that age, return "hooray!"', function(){
+     expect(newCalculator.checkExpectancy(newCalculator.expectancy("earth", 69.66, 12))).toEqual(57.66);
+     expect(newCalculator.checkExpectancy(newCalculator.expectancy("earth", 38.60, 40))).toEqual("hooray!");
+  });
 });

@@ -38,6 +38,6 @@ describe('Calculator', function() {
   });
 
   it('should return the correct difference between dates in seconds', function(){
-     expect(newCalculator.dateDifference(2018, "March", 16, 2018, "March", 15)).toEqual(0);
+     expect(newCalculator.dateDifference(2018, "March", 16, 2018, "March", 15)).toEqual(86400);
   });
 });
